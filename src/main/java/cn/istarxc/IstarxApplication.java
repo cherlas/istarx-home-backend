@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  * @date 2021/12/29
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-public class IstarxHomeApplication {
+public class IstarxApplication {
     public static void main(String[] args) {
-        SpringApplication.run(IstarxHomeApplication.class, args);
+        SpringApplication.run(IstarxApplication.class, args);
     }
 }

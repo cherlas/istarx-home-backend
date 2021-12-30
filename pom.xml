@@ -36,8 +36,13 @@
         <!--集成 flywaydb运行数据库脚本-->
         <dependency>
             <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-            <version>8.2.3</version>
+                <artifactId>flyway-core</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-mysql</artifactId>
+            <version>8.3.0</version>
         </dependency>
         <!-- druid 数据源 -->
         <dependency>
