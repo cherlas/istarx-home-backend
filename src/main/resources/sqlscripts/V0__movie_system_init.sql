@@ -7,6 +7,7 @@ CREATE TABLE `t_movie`
 (
     `id`           varchar(32) NOT NULL COMMENT '电影 ID',
     `name`         varchar(50) NOT NULL COMMENT '电影名称',
+    `description`  varchar(500) NOT NULL COMMENT '电影简介',
     `release_time` date                 DEFAULT NULL COMMENT '上映日期',
     `duration`     int         NOT NULL COMMENT '电影时长',
     `score`        int                  DEFAULT NULL COMMENT '电影评分',
