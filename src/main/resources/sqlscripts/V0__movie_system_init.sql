@@ -5,20 +5,20 @@ use `istarx-home`;
 DROP TABLE IF EXISTS `t_movie`;
 CREATE TABLE `t_movie`
 (
-    `id`           varchar(32) NOT NULL COMMENT '电影 ID',
-    `name`         varchar(50) NOT NULL COMMENT '电影名称',
+    `id`           varchar(32)  NOT NULL COMMENT '电影 ID',
+    `name`         varchar(50)  NOT NULL COMMENT '电影名称',
     `description`  varchar(500) NOT NULL COMMENT '电影简介',
-    `release_time` date                 DEFAULT NULL COMMENT '上映日期',
-    `duration`     int         NOT NULL COMMENT '电影时长',
-    `score`        int                  DEFAULT NULL COMMENT '电影评分',
-    `view_method`  varchar(20)          DEFAULT NULL COMMENT '观看方式',
-    `imdb_id`      varchar(20)          DEFAULT NULL COMMENT 'IMDB ID',
-    `douban_id`      varchar(20)          DEFAULT NULL COMMENT '豆瓣 ID',
-    `category`     int         NOT NULL COMMENT '分类：电影/电视剧/动漫 etc',
-    `watch_date`   datetime             DEFAULT NULL COMMENT '观看时间',
-    `cinema_id`    varchar(32)          DEFAULT NULL COMMENT '观看电影院 id',
-    `created_time` datetime    NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-    `updated_time` datetime    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后更新时间',
+    `release_time` date                  DEFAULT NULL COMMENT '上映日期',
+    `duration`     int          NOT NULL COMMENT '电影时长',
+    `score`        int                   DEFAULT NULL COMMENT '电影评分',
+    `view_method`  varchar(20)           DEFAULT NULL COMMENT '观看方式',
+    `imdb_id`      varchar(15)           DEFAULT NULL COMMENT 'IMDB ID',
+    `douban_id`    varchar(15)           DEFAULT NULL COMMENT '豆瓣 ID',
+    `category`     int          NOT NULL COMMENT '分类：电影/电视剧/动漫/纪录片 etc',
+    `watch_date`   datetime              DEFAULT NULL COMMENT '观看时间',
+    `cinema_id`    varchar(32)           DEFAULT NULL COMMENT '观看电影院 id',
+    `created_time` datetime     NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `updated_time` datetime     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后更新时间',
     PRIMARY KEY (`id`),
     KEY `t_movie_name_index` (`name`)
 ) ENGINE = InnoDB
