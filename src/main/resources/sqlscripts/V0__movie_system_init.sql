@@ -32,6 +32,7 @@ CREATE TABLE `t_actor`
     `name`         varchar(50) NOT NULL COMMENT '姓名',
     `sex`          enum ('F','M','U')   DEFAULT NULL COMMENT '性别',
     `brith_day`    date                 DEFAULT NULL COMMENT '出生日期',
+    `logo_url`     varchar(100)         DEFAULT NULL COMMENT '官方网站',
     `height`       int                  DEFAULT NULL COMMENT '身高',
     `zodiac`       char(6)              DEFAULT NULL COMMENT '星座',
     `country`      varchar(10)          DEFAULT NULL COMMENT '国家',
