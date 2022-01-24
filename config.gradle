@@ -1,0 +1,33 @@
+ext {
+  versions = [
+      projectVersion: '0.0.1',
+      javaVersion   : '17'
+  ]
+
+  projectDependencies = [
+      webflux        : 'org.springframework.boot:spring-boot-starter-webflux',
+      r2dbcStarter   : 'org.springframework.boot:spring-boot-starter-data-r2dbc',
+      springDataR2dbc: 'org.springframework.data:spring-data-r2dbc',
+      jasyncMysql    : 'com.github.jasync-sql:jasync-r2dbc-mysql:2.0.6',
+      actuator       : 'org.springframework.boot:spring-boot-starter-actuator',
+      flywayCore       : 'org.flywaydb:flyway-core:8.4.2',
+      flywayMysql:  'org.flywaydb:flyway-mysql:8.4.2',
+      springJdbc     : 'org.springframework:spring-jdbc',
+      mysql          : 'mysql:mysql-connector-java:8.0.28',
+      lombok         : 'org.projectlombok:lombok',
+
+      devtools       : 'org.springframework.boot:spring-boot-devtools',
+
+      testStarter    : 'org.springframework.boot:spring-boot-starter-test',
+      reactorTest    : 'io.projectreactor:reactor-test'
+  ]
+
+  flywayConfig = [
+      table    : "flyway_history",
+      locations: "classpath:sqlscripts",
+      url      : "jdbc:mysql://${databaseHost}:${databasePort}/${databaseSchema}",
+      user     : databaseUser,
+      password : databasePassword,
+      initSql  : "CREATE SCHEMA IF NOT EXISTS `${databaseSchema}` COLLATE utf8mb4_0900_ai_ci;"
+  ]
+}

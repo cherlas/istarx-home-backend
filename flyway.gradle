@@ -1,0 +1,13 @@
+
+
+def flywayConfig = rootProject.ext.flywayConfig
+
+flyway {
+  url = flywayConfig.url
+  user = flywayConfig.user
+  password = flywayConfig.password
+  schemas = [project.ext['databaseSchema']]
+  locations = [flywayConfig.locations]
+  table = flywayConfig.table
+  flyway.initSql = flywayConfig.initSql
+}

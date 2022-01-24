@@ -1,0 +1,63 @@
+buildscript {
+	dependencies {
+		classpath 'org.flywaydb:flyway-mysql:8.4.2'
+	}
+}
+plugins {
+	id 'org.springframework.boot' version '3.0.0-M1'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id "org.flywaydb.flyway" version "8.4.2"
+	id 'java'
+}
+
+apply from: 'config.gradle'
+apply from: 'flyway.gradle'
+
+def versionsConfig = rootProject.ext.versions
+def dependenciesConfig = rootProject.ext.projectDependencies
+
+group = 'cn.istarx'
+version = versionsConfig.projectVersion
+sourceCompatibility = versionsConfig.javaVersion
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	maven { url 'https://maven.aliyun.com/repository/public/' }
+	mavenLocal()
+	maven { url 'https://repo.spring.io/milestone' }
+	mavenCentral()
+}
+
+dependencies {
+	implementation dependenciesConfig.webflux
+	implementation dependenciesConfig.r2dbcStarter
+	implementation dependenciesConfig.springDataR2dbc
+	implementation dependenciesConfig.jasyncMysql
+	implementation dependenciesConfig.actuator
+	implementation dependenciesConfig.flywayMysql
+	implementation dependenciesConfig.springJdbc
+	implementation dependenciesConfig.mysql
+
+	compileOnly dependenciesConfig.lombok
+	annotationProcessor dependenciesConfig.lombok
+
+	developmentOnly dependenciesConfig.devtools
+
+	testImplementation dependenciesConfig.testStarter
+	testImplementation dependenciesConfig.reactorTest
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+processResources {
+	filesMatching("**/application.properties") {
+		expand(project.properties)
+	}
+}
