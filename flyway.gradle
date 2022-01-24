@@ -9,5 +9,5 @@ flyway {
   schemas = [project.ext['databaseSchema']]
   locations = [flywayConfig.locations]
   table = flywayConfig.table
-  flyway.initSql = flywayConfig.initSql
+  initSql = flywayConfig.initSql
 }
