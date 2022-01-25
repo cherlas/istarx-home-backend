@@ -2,8 +2,7 @@ create database if not exists `istarx-home`;
 
 use `istarx-home`;
 
-DROP TABLE IF EXISTS `t_movie`;
-CREATE TABLE `t_movie`
+CREATE TABLE IF NOT EXISTS `t_movie`
 (
     `id`           varchar(32)  NOT NULL COMMENT 'movie id',
     `name`         varchar(50)  NOT NULL COMMENT 'movie name',
@@ -25,8 +24,7 @@ CREATE TABLE `t_movie`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='movies info';
 
-DROP TABLE IF EXISTS `t_movie_images`;
-CREATE TABLE `t_images`
+CREATE TABLE IF NOT EXISTS `t_images`
 (
     `id`           varchar(32)  NOT NULL,
     `key_id`       varchar(32)  NOT NULL COMMENT 'actor/movie/role/writer id',
@@ -40,8 +38,7 @@ CREATE TABLE `t_images`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='poster and avatar images';
 
-DROP TABLE IF EXISTS `t_actor`;
-CREATE TABLE `t_actor`
+CREATE TABLE IF NOT EXISTS `t_actor`
 (
     `id`               varchar(32) NOT NULL COMMENT 'actor id',
     `name`             varchar(50) NOT NULL COMMENT 'name',
@@ -61,8 +58,7 @@ CREATE TABLE `t_actor`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='actors info';
 
-DROP TABLE IF EXISTS `t_movie_actor`;
-CREATE TABLE `t_movie_actor`
+CREATE TABLE IF NOT EXISTS `t_movie_actor`
 (
     `id`           varchar(32) NOT NULL COMMENT 'primary id',
     `movie_id`     varchar(32) NOT NULL COMMENT 'movie id',
@@ -75,8 +71,7 @@ CREATE TABLE `t_movie_actor`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='relationship between movies and actors';
 
-DROP TABLE IF EXISTS `t_role`;
-CREATE TABLE `t_role`
+CREATE TABLE IF NOT EXISTS `t_role`
 (
     `id`           varchar(32) NOT NULL COMMENT 'role id',
     `name`         varchar(50) NOT NULL COMMENT 'name',
@@ -91,8 +86,7 @@ CREATE TABLE `t_role`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='movie roles info';
 
-DROP TABLE IF EXISTS `t_alternate_names`;
-CREATE TABLE `t_alternate_names`
+CREATE TABLE IF NOT EXISTS `t_alternate_names`
 (
     `id`             varchar(32) NOT NULL COMMENT 'primary id',
     `movie_id`       varchar(32) NOT NULL COMMENT 'movie id',
@@ -105,8 +99,7 @@ CREATE TABLE `t_alternate_names`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='movie alternate names info';
 
-DROP TABLE IF EXISTS `t_country`;
-CREATE TABLE `t_country`
+CREATE TABLE IF NOT EXISTS `t_country`
 (
     `id`           varchar(32) NOT NULL COMMENT 'country id',
     `name`         varchar(20) NOT NULL COMMENT 'country name',
@@ -118,8 +111,7 @@ CREATE TABLE `t_country`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='countries info';
 
-DROP TABLE IF EXISTS `t_movie_country`;
-CREATE TABLE `t_movie_country`
+CREATE TABLE IF NOT EXISTS `t_movie_country`
 (
     `id`           varchar(32) NOT NULL COMMENT 'primary id',
     `movie_id`     varchar(32) NOT NULL COMMENT 'movie id',
@@ -132,8 +124,7 @@ CREATE TABLE `t_movie_country`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='relationship between movie and country';
 
-DROP TABLE IF EXISTS `t_director`;
-CREATE TABLE `t_director`
+CREATE TABLE IF NOT EXISTS `t_director`
 (
     `id`               varchar(32) NOT NULL COMMENT 'director id',
     `name`             varchar(50) NOT NULL COMMENT 'name',
@@ -152,8 +143,7 @@ CREATE TABLE `t_director`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='directors info';
 
-DROP TABLE IF EXISTS `t_movie_director`;
-CREATE TABLE `t_movie_director`
+CREATE TABLE IF NOT EXISTS `t_movie_director`
 (
     `id`           varchar(32) NOT NULL COMMENT 'primary id',
     `movie_id`     varchar(32) NOT NULL COMMENT 'movie id',
@@ -166,8 +156,7 @@ CREATE TABLE `t_movie_director`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='relationship between directors and movies';
 
-DROP TABLE IF EXISTS `t_label`;
-CREATE TABLE `t_label`
+CREATE TABLE IF NOT EXISTS `t_label`
 (
     `id`           varchar(32) NOT NULL COMMENT 'label id',
     `name`         varchar(50) NOT NULL COMMENT 'label name',
@@ -179,8 +168,7 @@ CREATE TABLE `t_label`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='labels info';
 
-DROP TABLE IF EXISTS `t_movie_label`;
-CREATE TABLE `t_movie_label`
+CREATE TABLE IF NOT EXISTS `t_movie_label`
 (
     `id`           varchar(32) NOT NULL COMMENT 'primary id',
     `movie_id`     varchar(32) NOT NULL COMMENT 'movie id',
@@ -193,8 +181,7 @@ CREATE TABLE `t_movie_label`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='relationship between labels and movies';
 
-DROP TABLE IF EXISTS `t_language`;
-CREATE TABLE `t_language`
+CREATE TABLE IF NOT EXISTS `t_language`
 (
     `id`           varchar(32) NOT NULL COMMENT 'language id',
     `name`         varchar(50) NOT NULL COMMENT 'language name',
@@ -206,8 +193,7 @@ CREATE TABLE `t_language`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='languages info';
 
-DROP TABLE IF EXISTS `t_movie_language`;
-CREATE TABLE `t_movie_language`
+CREATE TABLE IF NOT EXISTS `t_movie_language`
 (
     `id`           varchar(32) NOT NULL COMMENT 'primary id',
     `movie_id`     varchar(32) NOT NULL COMMENT 'movie id',
@@ -221,8 +207,7 @@ CREATE TABLE `t_movie_language`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='relationship between languages and movies';
 
-DROP TABLE IF EXISTS `t_screenwriter`;
-CREATE TABLE `t_screenwriter`
+CREATE TABLE IF NOT EXISTS `t_screenwriter`
 (
     `id`               varchar(32) NOT NULL COMMENT 'screenwriter id',
     `name`             varchar(50) NOT NULL COMMENT 'name',
@@ -241,8 +226,7 @@ CREATE TABLE `t_screenwriter`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci COMMENT ='screenwriters info';
 
-DROP TABLE IF EXISTS `t_movie_screenwriter`;
-CREATE TABLE `t_movie_screenwriter`
+CREATE TABLE IF NOT EXISTS `t_movie_screenwriter`
 (
     `id`              varchar(32) NOT NULL COMMENT 'primary id',
     `movie_id`        varchar(32) NOT NULL COMMENT 'movie id',
