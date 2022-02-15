@@ -9,12 +9,16 @@ ext {
       r2dbcStarter   : 'org.springframework.boot:spring-boot-starter-data-r2dbc',
       springDataR2dbc: 'org.springframework.data:spring-data-r2dbc',
       jasyncMysql    : 'com.github.jasync-sql:jasync-r2dbc-mysql:2.0.6',
+      r2dbcMysql     : 'dev.miku:r2dbc-mysql:0.8.2.RELEASE',
       actuator       : 'org.springframework.boot:spring-boot-starter-actuator',
-      flywayCore       : 'org.flywaydb:flyway-core:8.4.2',
-      flywayMysql:  'org.flywaydb:flyway-mysql:8.4.2',
+      flywayCore     : 'org.flywaydb:flyway-core:8.4.2',
+      flywayMysql    : 'org.flywaydb:flyway-mysql:8.4.3',
       springJdbc     : 'org.springframework:spring-jdbc',
       mysql          : 'mysql:mysql-connector-java:8.0.28',
       lombok         : 'org.projectlombok:lombok',
+      jsr310         : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.1",
+      commonsLang3   : 'org.apache.commons:commons-lang3:3.12.0',
+      log4j2         : 'org.springframework.boot:spring-boot-starter-log4j2:2.6.3',
 
       devtools       : 'org.springframework.boot:spring-boot-devtools',
 

@@ -43,6 +43,8 @@ dependencies {
 	implementation dependenciesConfig.flywayMysql
 	implementation dependenciesConfig.springJdbc
 	implementation dependenciesConfig.mysql
+	implementation dependenciesConfig.jsr310
+	implementation dependenciesConfig.commonsLang3
 
 	compileOnly dependenciesConfig.lombok
 	annotationProcessor dependenciesConfig.lombok
