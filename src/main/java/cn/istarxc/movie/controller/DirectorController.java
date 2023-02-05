@@ -60,7 +60,7 @@ public class DirectorController {
     }
 
     /**
-     * Retrieves an director by its id.
+     * Retrieves a director by its id.
      *
      * @param id must not be {@literal null}.
      * @return the director with the given id or {@link Mono#empty()} if none found.
@@ -71,10 +71,10 @@ public class DirectorController {
     }
 
     /**
-     * Returns whether an director with the given {@literal id} exists.
+     * Returns whether a director with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return emitting {@literal true} if an director with the given id exists, {@literal false} otherwise.
+     * @return emitting {@literal true} if a director with the given id exists, {@literal false} otherwise.
      */
     @GetMapping("exists/{id}")
     Mono<Boolean> existsById(@PathVariable("id") Integer id) {

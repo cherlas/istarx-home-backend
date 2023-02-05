@@ -38,17 +38,17 @@ public interface CountryService {
     Mono<Country> save(Country country);
 
     /**
-     * Saves all given countrys.
+     * Saves all given countries.
      *
-     * @param countrys must not be {@literal null}.
-     * @return {@link Flux} emitting the saved countrys.
-     * @throws IllegalArgumentException in case the given {@link Iterable countrys} or one of its countrys is
+     * @param countries must not be {@literal null}.
+     * @return {@link Flux} emitting the saved countries.
+     * @throws IllegalArgumentException in case the given {@link Iterable countries} or one of its countries is
      *                                  {@literal null}.
      */
-    Flux<Country> saveAll(Iterable<Country> countrys);
+    Flux<Country> saveAll(Iterable<Country> countries);
 
     /**
-     * Retrieves an country by its id.
+     * Retrieves a country by its id.
      *
      * @param id must not be {@literal null}.
      * @return {@link Mono} emitting the country with the given id or {@link Mono#empty()} if none found.
@@ -57,10 +57,10 @@ public interface CountryService {
     Mono<Country> findById(Integer id);
 
     /**
-     * Returns whether an country with the given {@literal id} exists.
+     * Returns whether a country with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return {@link Mono} emitting {@literal true} if an country with the given id exists, {@literal false} otherwise.
+     * @return {@link Mono} emitting {@literal true} if a country with the given id exists, {@literal false} otherwise.
      * @throws IllegalArgumentException in case the given {@literal id} is {@literal null}.
      */
     Mono<Boolean> existsById(Integer id);
@@ -68,28 +68,28 @@ public interface CountryService {
     /**
      * Returns all instances of the type.
      *
-     * @return {@link Flux} emitting all countrys.
+     * @return {@link Flux} emitting all countries.
      */
     Flux<Country> findAll();
 
     /**
      * Returns all instances of the type {@code Country} with the given IDs.
      * <p>
-     * If some or all ids are not found, no countrys are returned for these IDs.
+     * If some or all ids are not found, no countries are returned for these IDs.
      * <p>
      * Note that the order of elements in the result is not guaranteed.
      *
      * @param ids must not be {@literal null} nor contain any {@literal null} values.
-     * @return {@link Flux} emitting the found countrys. The size can be equal or less than the number of given
+     * @return {@link Flux} emitting the found countries. The size can be equal or less than the number of given
      * {@literal ids}.
      * @throws IllegalArgumentException in case the given {@link Iterable ids} or one of its items is {@literal null}.
      */
     Flux<Country> findAllById(Iterable<Integer> ids);
 
     /**
-     * Returns the number of countrys available.
+     * Returns the number of countries available.
      *
-     * @return {@link Mono} emitting the number of countrys.
+     * @return {@link Mono} emitting the number of countries.
      */
     Mono<Long> count();
 

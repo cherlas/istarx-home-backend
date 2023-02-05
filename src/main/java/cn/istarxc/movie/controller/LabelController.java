@@ -60,7 +60,7 @@ public class LabelController {
     }
 
     /**
-     * Retrieves an label by its id.
+     * Retrieves a label by its id.
      *
      * @param id must not be {@literal null}.
      * @return the label with the given id or {@link Mono#empty()} if none found.
@@ -71,10 +71,10 @@ public class LabelController {
     }
 
     /**
-     * Returns whether an label with the given {@literal id} exists.
+     * Returns whether a label with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return emitting {@literal true} if an label with the given id exists, {@literal false} otherwise.
+     * @return emitting {@literal true} if a label with the given id exists, {@literal false} otherwise.
      */
     @GetMapping("exists/{id}")
     Mono<Boolean> existsById(@PathVariable("id") Integer id) {

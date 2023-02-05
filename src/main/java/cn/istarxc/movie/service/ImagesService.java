@@ -38,14 +38,14 @@ public interface ImagesService {
     Mono<Images> save(Images images);
 
     /**
-     * Saves all given imagess.
+     * Saves all given images.
      *
-     * @param imagess must not be {@literal null}.
-     * @return {@link Flux} emitting the saved imagess.
-     * @throws IllegalArgumentException in case the given {@link Iterable imagess} or one of its imagess is
+     * @param images must not be {@literal null}.
+     * @return {@link Flux} emitting the saved images.
+     * @throws IllegalArgumentException in case the given {@link Iterable images} or one of its images is
      *                                  {@literal null}.
      */
-    Flux<Images> saveAll(Iterable<Images> imagess);
+    Flux<Images> saveAll(Iterable<Images> images);
 
     /**
      * Retrieves an images by its id.
@@ -68,28 +68,28 @@ public interface ImagesService {
     /**
      * Returns all instances of the type.
      *
-     * @return {@link Flux} emitting all imagess.
+     * @return {@link Flux} emitting all images.
      */
     Flux<Images> findAll();
 
     /**
      * Returns all instances of the type {@code Images} with the given IDs.
      * <p>
-     * If some or all ids are not found, no imagess are returned for these IDs.
+     * If some or all ids are not found, no images are returned for these IDs.
      * <p>
      * Note that the order of elements in the result is not guaranteed.
      *
      * @param ids must not be {@literal null} nor contain any {@literal null} values.
-     * @return {@link Flux} emitting the found imagess. The size can be equal or less than the number of given
+     * @return {@link Flux} emitting the found images. The size can be equal or less than the number of given
      * {@literal ids}.
      * @throws IllegalArgumentException in case the given {@link Iterable ids} or one of its items is {@literal null}.
      */
     Flux<Images> findAllById(Iterable<Integer> ids);
 
     /**
-     * Returns the number of imagess available.
+     * Returns the number of images available.
      *
-     * @return {@link Mono} emitting the number of imagess.
+     * @return {@link Mono} emitting the number of images.
      */
     Mono<Long> count();
 

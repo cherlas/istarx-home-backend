@@ -48,7 +48,7 @@ public interface RoleService {
     Flux<Role> saveAll(Iterable<Role> roles);
 
     /**
-     * Retrieves an role by its id.
+     * Retrieves a role by its id.
      *
      * @param id must not be {@literal null}.
      * @return {@link Mono} emitting the role with the given id or {@link Mono#empty()} if none found.
@@ -57,10 +57,10 @@ public interface RoleService {
     Mono<Role> findById(Integer id);
 
     /**
-     * Returns whether an role with the given {@literal id} exists.
+     * Returns whether a role with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return {@link Mono} emitting {@literal true} if an role with the given id exists, {@literal false} otherwise.
+     * @return {@link Mono} emitting {@literal true} if a role with the given id exists, {@literal false} otherwise.
      * @throws IllegalArgumentException in case the given {@literal id} is {@literal null}.
      */
     Mono<Boolean> existsById(Integer id);

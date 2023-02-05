@@ -48,7 +48,7 @@ public interface MovieService {
     Flux<Movie> saveAll(Iterable<Movie> movies);
 
     /**
-     * Retrieves an movie by its id.
+     * Retrieves a movie by its id.
      *
      * @param id must not be {@literal null}.
      * @return {@link Mono} emitting the movie with the given id or {@link Mono#empty()} if none found.
@@ -57,10 +57,10 @@ public interface MovieService {
     Mono<Movie> findById(Integer id);
 
     /**
-     * Returns whether an movie with the given {@literal id} exists.
+     * Returns whether a movie with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return {@link Mono} emitting {@literal true} if an movie with the given id exists, {@literal false} otherwise.
+     * @return {@link Mono} emitting {@literal true} if a movie with the given id exists, {@literal false} otherwise.
      * @throws IllegalArgumentException in case the given {@literal id} is {@literal null}.
      */
     Mono<Boolean> existsById(Integer id);

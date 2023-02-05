@@ -48,7 +48,7 @@ public interface DirectorService {
     Flux<Director> saveAll(Iterable<Director> directors);
 
     /**
-     * Retrieves an director by its id.
+     * Retrieves a director by its id.
      *
      * @param id must not be {@literal null}.
      * @return {@link Mono} emitting the director with the given id or {@link Mono#empty()} if none found.
@@ -57,10 +57,10 @@ public interface DirectorService {
     Mono<Director> findById(Integer id);
 
     /**
-     * Returns whether an director with the given {@literal id} exists.
+     * Returns whether a director with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return {@link Mono} emitting {@literal true} if an director with the given id exists, {@literal false} otherwise.
+     * @return {@link Mono} emitting {@literal true} if a director with the given id exists, {@literal false} otherwise.
      * @throws IllegalArgumentException in case the given {@literal id} is {@literal null}.
      */
     Mono<Boolean> existsById(Integer id);

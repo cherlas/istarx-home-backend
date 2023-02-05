@@ -48,7 +48,7 @@ public interface LanguageService {
     Flux<Language> saveAll(Iterable<Language> languages);
 
     /**
-     * Retrieves an language by its id.
+     * Retrieves a language by its id.
      *
      * @param id must not be {@literal null}.
      * @return {@link Mono} emitting the language with the given id or {@link Mono#empty()} if none found.
@@ -57,10 +57,10 @@ public interface LanguageService {
     Mono<Language> findById(Integer id);
 
     /**
-     * Returns whether an language with the given {@literal id} exists.
+     * Returns whether a language with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return {@link Mono} emitting {@literal true} if an language with the given id exists, {@literal false} otherwise.
+     * @return {@link Mono} emitting {@literal true} if a language with the given id exists, {@literal false} otherwise.
      * @throws IllegalArgumentException in case the given {@literal id} is {@literal null}.
      */
     Mono<Boolean> existsById(Integer id);

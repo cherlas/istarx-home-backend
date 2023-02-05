@@ -41,8 +41,8 @@ public class AlternateNamesServiceImpl implements AlternateNamesService {
     }
 
     @Override
-    public Flux<AlternateNames> saveAll(Iterable<AlternateNames> alternateNamess) {
-        return alternateNamesRepository.saveAll(alternateNamess);
+    public Flux<AlternateNames> saveAll(Iterable<AlternateNames> alternateNames) {
+        return alternateNamesRepository.saveAll(alternateNames);
     }
 
     @Override

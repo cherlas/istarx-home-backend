@@ -41,8 +41,8 @@ public class CountryServiceImpl implements CountryService {
     }
 
     @Override
-    public Flux<Country> saveAll(Iterable<Country> countrys) {
-        return countryRepository.saveAll(countrys);
+    public Flux<Country> saveAll(Iterable<Country> countries) {
+        return countryRepository.saveAll(countries);
     }
 
     @Override

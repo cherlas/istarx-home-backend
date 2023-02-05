@@ -48,19 +48,19 @@ public class CountryController {
     }
 
     /**
-     * Saves all given countrys.
+     * Saves all given countries.
      *
-     * @param countrys must not be {@literal null}.
-     * @return the saved countrys.
+     * @param countries must not be {@literal null}.
+     * @return the saved countries.
      * {@literal null}.
      */
     @PostMapping("all")
-    Flux<Country> saveAll(@RequestBody Iterable<Country> countrys) {
-        return countryService.saveAll(countrys);
+    Flux<Country> saveAll(@RequestBody Iterable<Country> countries) {
+        return countryService.saveAll(countries);
     }
 
     /**
-     * Retrieves an country by its id.
+     * Retrieves a country by its id.
      *
      * @param id must not be {@literal null}.
      * @return the country with the given id or {@link Mono#empty()} if none found.
@@ -71,10 +71,10 @@ public class CountryController {
     }
 
     /**
-     * Returns whether an country with the given {@literal id} exists.
+     * Returns whether a country with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return emitting {@literal true} if an country with the given id exists, {@literal false} otherwise.
+     * @return emitting {@literal true} if a country with the given id exists, {@literal false} otherwise.
      */
     @GetMapping("exists/{id}")
     Mono<Boolean> existsById(@PathVariable("id") Integer id) {
@@ -84,7 +84,7 @@ public class CountryController {
     /**
      * Returns all instances of the type.
      *
-     * @return all countrys.
+     * @return all countries.
      */
     @GetMapping("all")
     Flux<Country> findAll() {
@@ -94,12 +94,12 @@ public class CountryController {
     /**
      * Returns all instances of the type {@code Country} with the given IDs.
      * <p>
-     * If some or all ids are not found, no countrys are returned for these IDs.
+     * If some or all ids are not found, no countries are returned for these IDs.
      * <p>
      * Note that the order of elements in the result is not guaranteed.
      *
      * @param ids must not be {@literal null} nor contain any {@literal null} values.
-     * @return the found countrys. The size can be equal or less than the number of given
+     * @return the found countries. The size can be equal or less than the number of given
      * {@literal ids}.
      */
     @GetMapping("all/ids")
@@ -108,9 +108,9 @@ public class CountryController {
     }
 
     /**
-     * Returns the number of countrys available.
+     * Returns the number of countries available.
      *
-     * @return the number of countrys.
+     * @return the number of countries.
      */
     @GetMapping("count")
     Mono<Long> count() {

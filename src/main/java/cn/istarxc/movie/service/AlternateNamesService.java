@@ -38,14 +38,14 @@ public interface AlternateNamesService {
     Mono<AlternateNames> save(AlternateNames alternateNames);
 
     /**
-     * Saves all given alternateNamess.
+     * Saves all given alternateNames.
      *
-     * @param alternateNamess must not be {@literal null}.
-     * @return {@link Flux} emitting the saved alternateNamess.
-     * @throws IllegalArgumentException in case the given {@link Iterable alternateNamess} or one of its alternateNamess is
+     * @param alternateNames must not be {@literal null}.
+     * @return {@link Flux} emitting the saved alternateNames.
+     * @throws IllegalArgumentException in case the given {@link Iterable alternateNames} or one of its alternateNames is
      *                                  {@literal null}.
      */
-    Flux<AlternateNames> saveAll(Iterable<AlternateNames> alternateNamess);
+    Flux<AlternateNames> saveAll(Iterable<AlternateNames> alternateNames);
 
     /**
      * Retrieves an alternateNames by its id.
@@ -68,28 +68,28 @@ public interface AlternateNamesService {
     /**
      * Returns all instances of the type.
      *
-     * @return {@link Flux} emitting all alternateNamess.
+     * @return {@link Flux} emitting all alternateNames.
      */
     Flux<AlternateNames> findAll();
 
     /**
      * Returns all instances of the type {@code AlternateNames} with the given IDs.
      * <p>
-     * If some or all ids are not found, no alternateNamess are returned for these IDs.
+     * If some or all ids are not found, no alternateNames are returned for these IDs.
      * <p>
      * Note that the order of elements in the result is not guaranteed.
      *
      * @param ids must not be {@literal null} nor contain any {@literal null} values.
-     * @return {@link Flux} emitting the found alternateNamess. The size can be equal or less than the number of given
+     * @return {@link Flux} emitting the found alternateNames. The size can be equal or less than the number of given
      * {@literal ids}.
      * @throws IllegalArgumentException in case the given {@link Iterable ids} or one of its items is {@literal null}.
      */
     Flux<AlternateNames> findAllById(Iterable<Integer> ids);
 
     /**
-     * Returns the number of alternateNamess available.
+     * Returns the number of alternateNames available.
      *
-     * @return {@link Mono} emitting the number of alternateNamess.
+     * @return {@link Mono} emitting the number of alternateNames.
      */
     Mono<Long> count();
 

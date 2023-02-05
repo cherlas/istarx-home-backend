@@ -41,8 +41,8 @@ public class ImagesServiceImpl implements ImagesService {
     }
 
     @Override
-    public Flux<Images> saveAll(Iterable<Images> imagess) {
-        return imagesRepository.saveAll(imagess);
+    public Flux<Images> saveAll(Iterable<Images> images) {
+        return imagesRepository.saveAll(images);
     }
 
     @Override

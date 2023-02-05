@@ -37,7 +37,7 @@ public class ImagesController {
     private ImagesService imagesService;
 
     /**
-     * Saves a images and returned the saved instance.
+     * Saves an images and returned the saved instance.
      *
      * @param images must not be {@literal null}.
      * @return the saved images.
@@ -48,15 +48,15 @@ public class ImagesController {
     }
 
     /**
-     * Saves all given imagess.
+     * Saves all given images.
      *
-     * @param imagess must not be {@literal null}.
-     * @return the saved imagess.
+     * @param images must not be {@literal null}.
+     * @return the saved images.
      * {@literal null}.
      */
     @PostMapping("all")
-    Flux<Images> saveAll(@RequestBody Iterable<Images> imagess) {
-        return imagesService.saveAll(imagess);
+    Flux<Images> saveAll(@RequestBody Iterable<Images> images) {
+        return imagesService.saveAll(images);
     }
 
     /**
@@ -84,7 +84,7 @@ public class ImagesController {
     /**
      * Returns all instances of the type.
      *
-     * @return all imagess.
+     * @return all images.
      */
     @GetMapping("all")
     Flux<Images> findAll() {
@@ -94,12 +94,12 @@ public class ImagesController {
     /**
      * Returns all instances of the type {@code Images} with the given IDs.
      * <p>
-     * If some or all ids are not found, no imagess are returned for these IDs.
+     * If some or all ids are not found, no images are returned for these IDs.
      * <p>
      * Note that the order of elements in the result is not guaranteed.
      *
      * @param ids must not be {@literal null} nor contain any {@literal null} values.
-     * @return the found imagess. The size can be equal or less than the number of given
+     * @return the found images. The size can be equal or less than the number of given
      * {@literal ids}.
      */
     @GetMapping("all/ids")
@@ -108,9 +108,9 @@ public class ImagesController {
     }
 
     /**
-     * Returns the number of imagess available.
+     * Returns the number of images available.
      *
-     * @return the number of imagess.
+     * @return the number of images.
      */
     @GetMapping("count")
     Mono<Long> count() {

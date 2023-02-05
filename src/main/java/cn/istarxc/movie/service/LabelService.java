@@ -48,7 +48,7 @@ public interface LabelService {
     Flux<Label> saveAll(Iterable<Label> labels);
 
     /**
-     * Retrieves an label by its id.
+     * Retrieves a label by its id.
      *
      * @param id must not be {@literal null}.
      * @return {@link Mono} emitting the label with the given id or {@link Mono#empty()} if none found.
@@ -57,10 +57,10 @@ public interface LabelService {
     Mono<Label> findById(Integer id);
 
     /**
-     * Returns whether an label with the given {@literal id} exists.
+     * Returns whether a label with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return {@link Mono} emitting {@literal true} if an label with the given id exists, {@literal false} otherwise.
+     * @return {@link Mono} emitting {@literal true} if a label with the given id exists, {@literal false} otherwise.
      * @throws IllegalArgumentException in case the given {@literal id} is {@literal null}.
      */
     Mono<Boolean> existsById(Integer id);

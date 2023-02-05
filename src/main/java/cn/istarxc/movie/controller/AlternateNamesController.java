@@ -48,15 +48,15 @@ public class AlternateNamesController {
     }
 
     /**
-     * Saves all given alternateNamess.
+     * Saves all given alternateNames.
      *
-     * @param alternateNamess must not be {@literal null}.
-     * @return the saved alternateNamess.
+     * @param alternateNames must not be {@literal null}.
+     * @return the saved alternateNames.
      * {@literal null}.
      */
     @PostMapping("all")
-    Flux<AlternateNames> saveAll(@RequestBody Iterable<AlternateNames> alternateNamess) {
-        return alternateNamesService.saveAll(alternateNamess);
+    Flux<AlternateNames> saveAll(@RequestBody Iterable<AlternateNames> alternateNames) {
+        return alternateNamesService.saveAll(alternateNames);
     }
 
     /**
@@ -84,7 +84,7 @@ public class AlternateNamesController {
     /**
      * Returns all instances of the type.
      *
-     * @return all alternateNamess.
+     * @return all alternateNames.
      */
     @GetMapping("all")
     Flux<AlternateNames> findAll() {
@@ -94,12 +94,12 @@ public class AlternateNamesController {
     /**
      * Returns all instances of the type {@code AlternateNames} with the given IDs.
      * <p>
-     * If some or all ids are not found, no alternateNamess are returned for these IDs.
+     * If some or all ids are not found, no alternateNames are returned for these IDs.
      * <p>
      * Note that the order of elements in the result is not guaranteed.
      *
      * @param ids must not be {@literal null} nor contain any {@literal null} values.
-     * @return the found alternateNamess. The size can be equal or less than the number of given
+     * @return the found alternateNames. The size can be equal or less than the number of given
      * {@literal ids}.
      */
     @GetMapping("all/ids")
@@ -108,9 +108,9 @@ public class AlternateNamesController {
     }
 
     /**
-     * Returns the number of alternateNamess available.
+     * Returns the number of alternateNames available.
      *
-     * @return the number of alternateNamess.
+     * @return the number of alternateNames.
      */
     @GetMapping("count")
     Mono<Long> count() {

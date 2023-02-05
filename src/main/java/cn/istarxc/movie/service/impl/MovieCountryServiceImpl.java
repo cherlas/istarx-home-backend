@@ -41,8 +41,8 @@ public class MovieCountryServiceImpl implements MovieCountryService {
     }
 
     @Override
-    public Flux<MovieCountry> saveAll(Iterable<MovieCountry> movieCountrys) {
-        return movieCountryRepository.saveAll(movieCountrys);
+    public Flux<MovieCountry> saveAll(Iterable<MovieCountry> movieCountries) {
+        return movieCountryRepository.saveAll(movieCountries);
     }
 
     @Override

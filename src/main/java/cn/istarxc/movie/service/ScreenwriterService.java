@@ -48,7 +48,7 @@ public interface ScreenwriterService {
     Flux<Screenwriter> saveAll(Iterable<Screenwriter> screenwriters);
 
     /**
-     * Retrieves an screenwriter by its id.
+     * Retrieves a screenwriter by its id.
      *
      * @param id must not be {@literal null}.
      * @return {@link Mono} emitting the screenwriter with the given id or {@link Mono#empty()} if none found.
@@ -57,10 +57,10 @@ public interface ScreenwriterService {
     Mono<Screenwriter> findById(Integer id);
 
     /**
-     * Returns whether an screenwriter with the given {@literal id} exists.
+     * Returns whether a screenwriter with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return {@link Mono} emitting {@literal true} if an screenwriter with the given id exists, {@literal false} otherwise.
+     * @return {@link Mono} emitting {@literal true} if a screenwriter with the given id exists, {@literal false} otherwise.
      * @throws IllegalArgumentException in case the given {@literal id} is {@literal null}.
      */
     Mono<Boolean> existsById(Integer id);

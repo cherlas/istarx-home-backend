@@ -38,14 +38,14 @@ public interface MovieCountryService {
     Mono<MovieCountry> save(MovieCountry movieCountry);
 
     /**
-     * Saves all given movieCountrys.
+     * Saves all given movieCountries.
      *
-     * @param movieCountrys must not be {@literal null}.
-     * @return {@link Flux} emitting the saved movieCountrys.
-     * @throws IllegalArgumentException in case the given {@link Iterable movieCountrys} or one of its movieCountrys is
+     * @param movieCountries must not be {@literal null}.
+     * @return {@link Flux} emitting the saved movieCountries.
+     * @throws IllegalArgumentException in case the given {@link Iterable movieCountries} or one of its movieCountries is
      *                                  {@literal null}.
      */
-    Flux<MovieCountry> saveAll(Iterable<MovieCountry> movieCountrys);
+    Flux<MovieCountry> saveAll(Iterable<MovieCountry> movieCountries);
 
     /**
      * Retrieves an movieCountry by its id.
@@ -68,28 +68,28 @@ public interface MovieCountryService {
     /**
      * Returns all instances of the type.
      *
-     * @return {@link Flux} emitting all movieCountrys.
+     * @return {@link Flux} emitting all movieCountries.
      */
     Flux<MovieCountry> findAll();
 
     /**
      * Returns all instances of the type {@code MovieCountry} with the given IDs.
      * <p>
-     * If some or all ids are not found, no movieCountrys are returned for these IDs.
+     * If some or all ids are not found, no movieCountries are returned for these IDs.
      * <p>
      * Note that the order of elements in the result is not guaranteed.
      *
      * @param ids must not be {@literal null} nor contain any {@literal null} values.
-     * @return {@link Flux} emitting the found movieCountrys. The size can be equal or less than the number of given
+     * @return {@link Flux} emitting the found movieCountries. The size can be equal or less than the number of given
      * {@literal ids}.
      * @throws IllegalArgumentException in case the given {@link Iterable ids} or one of its items is {@literal null}.
      */
     Flux<MovieCountry> findAllById(Iterable<Integer> ids);
 
     /**
-     * Returns the number of movieCountrys available.
+     * Returns the number of movieCountries available.
      *
-     * @return {@link Mono} emitting the number of movieCountrys.
+     * @return {@link Mono} emitting the number of movieCountries.
      */
     Mono<Long> count();
 

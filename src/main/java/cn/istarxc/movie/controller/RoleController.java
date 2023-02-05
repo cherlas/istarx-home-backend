@@ -60,7 +60,7 @@ public class RoleController {
     }
 
     /**
-     * Retrieves an role by its id.
+     * Retrieves a role by its id.
      *
      * @param id must not be {@literal null}.
      * @return the role with the given id or {@link Mono#empty()} if none found.
@@ -71,10 +71,10 @@ public class RoleController {
     }
 
     /**
-     * Returns whether an role with the given {@literal id} exists.
+     * Returns whether a role with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return emitting {@literal true} if an role with the given id exists, {@literal false} otherwise.
+     * @return emitting {@literal true} if a role with the given id exists, {@literal false} otherwise.
      */
     @GetMapping("exists/{id}")
     Mono<Boolean> existsById(@PathVariable("id") Integer id) {

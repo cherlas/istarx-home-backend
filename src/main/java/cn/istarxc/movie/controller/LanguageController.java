@@ -60,7 +60,7 @@ public class LanguageController {
     }
 
     /**
-     * Retrieves an language by its id.
+     * Retrieves a language by its id.
      *
      * @param id must not be {@literal null}.
      * @return the language with the given id or {@link Mono#empty()} if none found.
@@ -71,10 +71,10 @@ public class LanguageController {
     }
 
     /**
-     * Returns whether an language with the given {@literal id} exists.
+     * Returns whether a language with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return emitting {@literal true} if an language with the given id exists, {@literal false} otherwise.
+     * @return emitting {@literal true} if a language with the given id exists, {@literal false} otherwise.
      */
     @GetMapping("exists/{id}")
     Mono<Boolean> existsById(@PathVariable("id") Integer id) {

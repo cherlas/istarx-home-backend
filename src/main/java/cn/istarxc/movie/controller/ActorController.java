@@ -37,7 +37,7 @@ public class ActorController {
     private ActorService actorService;
 
     /**
-     * Saves a actor and returned the saved instance.
+     * Saves an actor and returned the saved instance.
      *
      * @param actor must not be {@literal null}.
      * @return the saved actor.

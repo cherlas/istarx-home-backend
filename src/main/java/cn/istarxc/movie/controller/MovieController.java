@@ -60,7 +60,7 @@ public class MovieController {
     }
 
     /**
-     * Retrieves an movie by its id.
+     * Retrieves a movie by its id.
      *
      * @param id must not be {@literal null}.
      * @return the movie with the given id or {@link Mono#empty()} if none found.
@@ -71,10 +71,10 @@ public class MovieController {
     }
 
     /**
-     * Returns whether an movie with the given {@literal id} exists.
+     * Returns whether a movie with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return emitting {@literal true} if an movie with the given id exists, {@literal false} otherwise.
+     * @return emitting {@literal true} if a movie with the given id exists, {@literal false} otherwise.
      */
     @GetMapping("exists/{id}")
     Mono<Boolean> existsById(@PathVariable("id") Integer id) {

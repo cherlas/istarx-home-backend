@@ -60,7 +60,7 @@ public class ScreenwriterController {
     }
 
     /**
-     * Retrieves an screenwriter by its id.
+     * Retrieves a screenwriter by its id.
      *
      * @param id must not be {@literal null}.
      * @return the screenwriter with the given id or {@link Mono#empty()} if none found.
@@ -71,10 +71,10 @@ public class ScreenwriterController {
     }
 
     /**
-     * Returns whether an screenwriter with the given {@literal id} exists.
+     * Returns whether a screenwriter with the given {@literal id} exists.
      *
      * @param id must not be {@literal null}.
-     * @return emitting {@literal true} if an screenwriter with the given id exists, {@literal false} otherwise.
+     * @return emitting {@literal true} if a screenwriter with the given id exists, {@literal false} otherwise.
      */
     @GetMapping("exists/{id}")
     Mono<Boolean> existsById(@PathVariable("id") Integer id) {
